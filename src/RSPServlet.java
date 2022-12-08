@@ -1,6 +1,7 @@
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class RSPServlet
  */
-@WebServlet("/RSPoutput.jsp")
+@WebServlet("/RSPResult")
 public class RSPServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -58,6 +59,9 @@ public class RSPServlet extends HttpServlet {
 		request.setAttribute("userInput", userInput);
 		request.setAttribute("cpuInput", cpuInput);
         request.setAttribute("result", result);
+        
+        RequestDispatcher dispatcher = request.getRequestDispatcher("RSPoutput.jsp");
+		dispatcher.forward(request, response);
 	}
 
 	public String RSPspan() {

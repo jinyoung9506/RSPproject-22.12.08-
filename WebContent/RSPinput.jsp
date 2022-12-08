@@ -19,14 +19,14 @@
 <table>
 	<tr>
 		<td>
-			<form action="RSPoutput.jsp" method="post">
-				<iframe src="user.html" width="250px" height="250px" name="user"></iframe>
+			<form action="RSPResult" method="post">
+				<iframe src="user.html" width="250px" height="250px" id="user" name="user"></iframe>
 				<div>
 					<!-- RSPinput에서 button입력전달안되는부분 -->
-					<button type="button" class="btn btn-primary" name="userInput" value="scissor"><a href="scissor.html" target="user">가위</a></button>
-					<button type="button" class="btn btn-primary" name="userInput" value="rock"><a href="rock.html" target="user">바위</a></button>
-					<button type="button" class="btn btn-primary" name="userInput" value="paper"><a href="paper.html" target="user">&nbsp;&nbsp;보&nbsp;&nbsp;</a></button>
-					<button type="submit" class="btn btn-primary">선택</input>
+					<a href="scissor.html" target="user"><label for="radio1"><input type="radio" id="radio1" class="btn btn-primary" name="userInput" value="scissor">가위</input></label></a>
+					<label for="radio2"><a href="rock.html" target="user"><input type="radio" id="radio2" class="btn btn-primary" name="userInput" value="rock">바위</input></a></label>
+					<label for="radio3"><a href="paper.html" target="user"><input type="radio" id="radio3" class="btn btn-primary" name="userInput" value="paper">보</input></a></label>
+					<button type="submit" class="btn btn-primary" value="user" >선택</button>
 				</div>
 			</form>
 		</td>
